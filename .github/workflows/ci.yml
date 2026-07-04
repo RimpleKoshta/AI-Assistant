@@ -28,5 +28,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Verify Flask Application
+        env:
+            GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          python -c "import main; print('Flask app imported successfully!')"
+            python -c "import main; print('Flask app imported successfully!')"
