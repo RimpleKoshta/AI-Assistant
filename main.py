@@ -20,6 +20,9 @@ def hello_world():
 def ask():
     question = request.form.get("question")
 
+    if not question:
+        return jsonify({"error": "Question is required"}), 400
+
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[
@@ -44,6 +47,9 @@ def ask():
 @app.route("/summarize", methods=["POST"])
 def summarize():
     email_text = request.form.get("email")
+
+    if not email_text:
+        return jsonify({"error": "Email is required"}), 400
 
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
