@@ -22,7 +22,7 @@ An AI-powered web assistant built using **Flask** and **Groq's Llama 3.3 70B Ver
 1. User enters a question or email.
 2. Flask receives the request.
 3. The request is sent to the Groq API.
-4. Llama 3.3 processes the prompt.
+4. GPT-OSS 120B processes the prompt.
 5. AI-generated response is returned.
 6. The response is displayed in the web interface.
 
@@ -43,7 +43,7 @@ An AI-powered web assistant built using **Flask** and **Groq's Llama 3.3 70B Ver
 ### AI
 
 * Groq API
-* Llama 3.3 70B Versatile
+* GPT-OSS 120B
 
 ### Testing
 
